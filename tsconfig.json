@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "target": "es5",
+    "lib": ["es7", "dom", "es2018.promise"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "inlineSources": true,
+    "sourceRoot": "/",
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "jsx": "react-native",
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "types": ["node", "react", "react-native", "jest"],
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "baseUrl": "./src",
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+  },
+  "include": [
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
+    "src/typings.d.ts",
+    "src/typings.d.ts",
+    "App.tsx",
+    "AppErrorHandler.ts"
+  ],
+  "exclude": [
+    "android",
+    "ios",
+    "build",
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}
