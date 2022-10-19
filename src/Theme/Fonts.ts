@@ -22,6 +22,10 @@ export default function ({ FontSize, Colors }: ThemeVariables) {
       fontSize: FontSize.large,
       color: Colors.text,
     },
+    textExtraLarge: {
+      fontSize: FontSize.extraLarge,
+      color: Colors.text,
+    },
     titleSmall: {
       fontSize: FontSize.small * 2,
       fontWeight: 'bold',

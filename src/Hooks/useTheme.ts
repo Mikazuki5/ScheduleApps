@@ -1,4 +1,4 @@
-import { Animation, Common, DefaultVariables, Fonts, Gutters, Layout } from "@/Theme";
+import { Animation, Borders, Common, DefaultVariables, Fonts, Gutters, Images, Layout } from "@/Theme";
 import { Theme, ThemeNavigationColors, ThemeNavigationTheme, ThemeVariables } from "@/Theme/theme";
 import { DefaultTheme } from "@react-navigation/native";
 
@@ -10,28 +10,36 @@ export default function() {
 
   const fonts = Fonts(themeVariables)
   const gutters = Gutters(themeVariables)
+  const images = Images(themeVariables)
   const layout = Layout(themeVariables)
   const animation = Animation(themeVariables)
+  const borders = Borders(themeVariables)
   const common = Common({
     ...themeVariables,
     Layout: Layout(themeVariables),
     Gutters: Gutters(themeVariables),
+    Images: Images(themeVariables),
     Fonts: Fonts(themeVariables),
-    Animation: Animation(themeVariables)
+    Animation: Animation(themeVariables),
+    Borders: Borders(themeVariables)
   })
 
   const baseTheme: Theme<
+    typeof animation,
     typeof fonts,
     typeof gutters,
+    typeof images,
     typeof layout,
-    typeof common,
-    typeof animation
+    typeof borders,
+    typeof common
   > = {
+    Animation: animation,
     Fonts: fonts,
     Gutters: gutters,
+    Images: images,
     Layout: layout,
+    Borders: borders,
     Common: common,
-    Animation: animation,
     ...themeVariables,
   }
   return buildTheme(
@@ -40,9 +48,9 @@ export default function() {
   )
 }
 
-const formatTheme = <F, G, L, C, A>(
+const formatTheme = <A, F, G, I, L, B, C>(
   variables: ThemeVariables,
-  theme: Partial<Theme<F, G, L, C, A>>,
+  theme: Partial<Theme<A, F, G, I, L, B, C>>,
 ) => {
   return Object.entries(theme).reduce((acc, [name, generate]) => {
     return {
@@ -70,9 +78,9 @@ const mergeVariables = (
   }, DefaultVariables)
 }
 
-const buildTheme = <F, G, L, C, A>(
-  baseTheme: Theme<F, G, L, C, A>,
-  themeConfig: Partial<Theme<F, G, L, C, A>>,
+const buildTheme = <A, F, G, I, L, B, C>(
+  baseTheme: Theme<A, F, G, I, L, B, C>,
+  themeConfig: Partial<Theme<A, F, G, I, L, B, C>>,
 ) => {
   return {
     ...mergeTheme(baseTheme, themeConfig),
@@ -83,9 +91,9 @@ const buildTheme = <F, G, L, C, A>(
   }
 }
 
-const mergeTheme = <F, G, L, C, A>(
-  baseTheme: Theme<F, G, L, C, A>,
-  theme: Partial<Theme<F, G, L, C, A>>,
+const mergeTheme = <A, F, G, I, L, B, C>(
+  baseTheme: Theme<A, F, G, I, L, B, C>,
+  theme: Partial<Theme<A, F, G, I, L, B, C>>,
 ) =>
   Object.entries(baseTheme).reduce(
     (acc, [key, value]) => ({

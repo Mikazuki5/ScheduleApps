@@ -25,6 +25,7 @@ export const FontSize = {
   small: 16,
   regular: 20,
   large: 40,
+  extraLarge: 60
 }
 
 const tiny = 5 // 10
