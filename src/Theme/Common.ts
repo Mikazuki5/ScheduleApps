@@ -31,9 +31,8 @@ export default function <C>({ Colors, ...args }: CommonParams<C>) {
       },
       dash: {
         height: 0.5,
-        marginBottom: 18,
         borderStyle: 'dashed',
-        borderWidth: 0.5,
+        borderWidth: 1,
         borderColor: Colors.gray2
       },
       horizontalLined: {

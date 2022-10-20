@@ -4,3 +4,8 @@ export interface HeaderInterfaces {
   rightSide?: object | any;
   headerContainerStyle?: object
 }
+export interface CardWithTouchableInterfaces {
+  children: object | any;
+  cardCustomStyle?: object
+  onSubmit?: () => void
+}
