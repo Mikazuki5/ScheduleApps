@@ -135,5 +135,9 @@ export default function ({ }: ThemeVariables) {
     rotate90Inverse: {
       transform: [{ rotate: '-90deg' }],
     },
+    
+    overFlow: {
+      overflow: 'hidden'
+    }
   })
 }

@@ -5,13 +5,14 @@ import useTheme from '@/Hooks/useTheme';
 import { CardWithTouchable } from '../Common/CardComponent';
 import { ClockIcon } from 'react-native-heroicons/outline'
 
-const FutureSchedule = () => {
-  const {Colors, Layout, Borders, Gutters, Fonts, Common} = useTheme();
+const FutureSchedule = ({openUpcomingSchedule}: any) => {
+  const {Colors, Layout, Borders, Gutters, Fonts} = useTheme();
   const _renderItem = ({item, index}: any) => {
     return(
       <>
         {item?.schedule ? (
           <CardWithTouchable 
+            key={index}
             cardCustomStyle={[
               Borders.regularBRadius,
               Gutters.regularHPadding,
@@ -53,7 +54,7 @@ const FutureSchedule = () => {
             NEXT SCHEDULE
           </Text>
         </View>
-        <TouchableOpacity style={[Layout.fill, Layout.alignItemsEnd]}>
+        <TouchableOpacity style={[Layout.fill, Layout.alignItemsEnd]} onPress={openUpcomingSchedule}>
           <Text style={[Fonts.textSmall,{color: Colors.danger, fontWeight: '600'}]}>See All</Text>
         </TouchableOpacity>
       </View>

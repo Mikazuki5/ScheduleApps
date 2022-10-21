@@ -19,7 +19,7 @@ const HeaderComponent:React.FC<HeaderInterfaces> = ({
         headerContainerStyle
       ]}
     >
-      <View style={[{flex: 0.5}]}>
+      <View style={[{flex: 0.3}]}>
         {leftSide}
       </View>
       <View 
@@ -31,7 +31,7 @@ const HeaderComponent:React.FC<HeaderInterfaces> = ({
         ]}>
         <Text style={[Fonts.textSmall, Fonts.textBold]}>{title}</Text>
       </View>
-      <View style={[Layout.alignItemsEnd, {flex: 0.5}]}>
+      <View style={[Layout.alignItemsEnd, {flex: 0.3}]}>
         {rightSide}
       </View>
     </View>

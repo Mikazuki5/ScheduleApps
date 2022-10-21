@@ -59,6 +59,15 @@ export default function <C>({ Colors, ...args }: CommonParams<C>) {
         shadowRadius: 1.41,
 
         elevation: 2,
+      },
+      bottomShadow: {
+        backgroundColor: '#fff',
+        height: 20,
+        shadowColor: '#000',
+        shadowOffset: { width: 1, height: 1 },
+        shadowOpacity:  0.4,
+        shadowRadius: 3,
+        elevation: 5,
       }
     }),
   }

@@ -5,7 +5,7 @@ import { FutureSchedule, HeaderComponent, TodayScheduleComponent } from '@/Compo
 import LottieView from 'lottie-react-native'
 import moment from 'moment'
 
-const HomeScreenContainer = () => {
+const HomeScreenContainer = ({navigation}: any) => {
   const {Colors, Layout, Animation, Images, Borders, Gutters, Fonts, Common} = useTheme();
   const [date, setDate] = useState(new Date())
 
@@ -68,7 +68,7 @@ const HomeScreenContainer = () => {
 
       <View style={[Layout.fill, Gutters.regularHMargin, Gutters.regularTMargin]}>
         <TodayScheduleComponent />
-        <FutureSchedule />
+        <FutureSchedule openUpcomingSchedule={() => navigation.navigate('upcoming')} />
       </View>
       
       <View style={[Layout.row]}>
