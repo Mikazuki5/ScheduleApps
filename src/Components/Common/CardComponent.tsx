@@ -1,14 +1,15 @@
+import React from "react"
+import { TouchableOpacity, View } from "react-native"
+
 import useTheme from "@/Hooks/useTheme"
 import { CardInterfaces } from "@/Services/Types/InterfaceType"
-import React from "react"
-import { TouchableOpacity, Text, View } from "react-native"
 
 export const CardWithTouchable:React.FC<CardInterfaces> = ({
   children,
   cardCustomStyle,
   onSubmit
 }) => {
-  const { Colors, Gutters, Borders } = useTheme()
+  const { Colors, Gutters, Borders } = useTheme();
   return (
     <TouchableOpacity 
       disabled={!onSubmit}

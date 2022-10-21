@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { ThemeVariables } from './theme'
 import { Colors } from './Variables'
 

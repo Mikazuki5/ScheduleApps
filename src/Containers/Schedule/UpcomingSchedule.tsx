@@ -1,9 +1,10 @@
-import { View, Text, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native'
 import React from 'react'
-import useTheme from '@/Hooks/useTheme'
-import { HeaderComponent, ListUpcomingSchedule } from '@/Components'
 import LottieView from 'lottie-react-native'
 import { ArrowLeftIcon } from 'react-native-heroicons/outline'
+import { View, Text, SafeAreaView, StatusBar, TouchableOpacity } from 'react-native'
+
+import useTheme from '@/Hooks/useTheme'
+import { HeaderComponent, ListUpcomingSchedule } from '@/Components'
 
 const UpcomingSchedule = ({navigation}: any) => {
   const { Layout, Colors, Gutters, Fonts, Animation, Common } = useTheme()

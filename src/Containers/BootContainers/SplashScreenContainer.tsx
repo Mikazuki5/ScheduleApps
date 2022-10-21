@@ -1,14 +1,15 @@
-import { View, Text, SafeAreaView, StatusBar } from 'react-native'
 import React, { useEffect } from 'react'
-import useTheme from '@/Hooks/useTheme'
 import LottieView from 'lottie-react-native';
+import { View, Text, SafeAreaView, StatusBar } from 'react-native'
+
+import useTheme from '@/Hooks/useTheme'
 
 const SplashScreenContainer = ({navigation}: any) => {
   const { Layout, Animation, Colors } = useTheme();
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('Home')
+      navigation.replace('Home');
     }, 5000);
   }, [])
   
