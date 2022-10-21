@@ -1,12 +1,14 @@
-import { View, Text, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { DummySchedule } from '@/Services/Dummy/Dummy'
-import useTheme from '@/Hooks/useTheme';
-import { CardWithTouchable } from '../Common/CardComponent';
 import { ClockIcon } from 'react-native-heroicons/outline'
+import { View, Text, FlatList, TouchableOpacity } from 'react-native'
+
+import useTheme from '@/Hooks/useTheme'
+import { DummySchedule } from '@/Services/Dummy/Dummy'
+import { CardWithTouchable } from '../Common/CardComponent'
 
 const FutureSchedule = ({openUpcomingSchedule}: any) => {
   const {Colors, Layout, Borders, Gutters, Fonts} = useTheme();
+  
   const _renderItem = ({item, index}: any) => {
     return(
       <>

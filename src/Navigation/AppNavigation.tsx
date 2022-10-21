@@ -1,9 +1,10 @@
 import React from 'react'
+import useTheme from '@/Hooks/useTheme'
+import { NavigationContainer } from '@react-navigation/native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { NavigationContainer } from '@react-navigation/native'
+
 import { DetailSchedule, HomeScreenContainer, SplashScreenContainer, UpcomingSchedule } from '@/Containers'
-import useTheme from '@/Hooks/useTheme'
 
 const Stack = createNativeStackNavigator()
 

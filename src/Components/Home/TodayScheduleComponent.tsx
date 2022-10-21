@@ -1,11 +1,13 @@
 import React from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
-import useTheme from '@/Hooks/useTheme';
 import { ClockIcon } from 'react-native-heroicons/outline'
-import { CardWithTouchable } from '../Common/CardComponent';
+import { View, Text, TouchableOpacity } from 'react-native'
+
+import useTheme from '@/Hooks/useTheme';
+import { CardWithTouchable } from '../Common/CardComponent'
 
 const TodayScheduleComponent = () => {
   const {Colors, Layout, Borders, Gutters, Fonts, Common} = useTheme();
+  
   return (
     <>
       <View style={[Layout.rowHCenter]}>

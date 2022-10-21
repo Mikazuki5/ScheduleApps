@@ -1,6 +1,6 @@
-import { Animation, Borders, Common, DefaultVariables, Fonts, Gutters, Images, Layout } from "@/Theme";
-import { Theme, ThemeNavigationColors, ThemeNavigationTheme, ThemeVariables } from "@/Theme/theme";
 import { DefaultTheme } from "@react-navigation/native";
+import { Theme, ThemeNavigationColors, ThemeNavigationTheme, ThemeVariables } from "@/Theme/theme";
+import { Animation, Borders, Common, DefaultVariables, Fonts, Gutters, Images, Layout } from "@/Theme";
 
 export default function() {
   let variables = {}

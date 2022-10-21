@@ -1,8 +1,9 @@
-import { View, Text } from 'react-native'
 import React from 'react'
-import { DetailsScheduleIntefaces } from '@/Services/Types/InterfaceType'
-import { CardWithTouchable } from '@/Components/Common/CardComponent'
+import { View, Text } from 'react-native'
+
 import useTheme from '@/Hooks/useTheme'
+import { CardWithTouchable } from '@/Components/Common/CardComponent'
+import { DetailsScheduleIntefaces } from '@/Services/Types/InterfaceType'
 
 const ListDetailScheduleComponent: React.FC<DetailsScheduleIntefaces> = ({
   title,

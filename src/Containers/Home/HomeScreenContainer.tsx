@@ -1,12 +1,13 @@
-import { View, Text, StatusBar, SafeAreaView, TouchableOpacity, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
+import moment from 'moment'
+import LottieView from 'lottie-react-native'
+import { View, Text, StatusBar, SafeAreaView, TouchableOpacity, Image } from 'react-native'
+
 import useTheme from '@/Hooks/useTheme'
 import { FutureSchedule, HeaderComponent, TodayScheduleComponent } from '@/Components'
-import LottieView from 'lottie-react-native'
-import moment from 'moment'
 
 const HomeScreenContainer = ({navigation}: any) => {
-  const {Colors, Layout, Animation, Images, Borders, Gutters, Fonts, Common} = useTheme();
+  const {Colors, Layout, Animation, Images, Borders, Gutters, Fonts} = useTheme();
   const [date, setDate] = useState(new Date())
 
   const refreshTime = () => {

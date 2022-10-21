@@ -1,13 +1,14 @@
-import { View, Image, SafeAreaView, StatusBar, TouchableOpacity, ScrollView, Text } from 'react-native'
 import React from 'react'
+import LottieView from 'lottie-react-native'
+import { ArrowLeftIcon, ClockIcon } from 'react-native-heroicons/outline';
+import { View, Image, SafeAreaView, StatusBar, TouchableOpacity, ScrollView, Text } from 'react-native'
+
 import useTheme from '@/Hooks/useTheme';
 import { HeaderComponent, ListDetailScheduleComponent } from '@/Components';
-import { ArrowLeftIcon, ClockIcon } from 'react-native-heroicons/outline';
-import LottieView from 'lottie-react-native'
 
 const DetailSchedule = (props: any) => {
   let data = props?.route?.params?.data;
-  const { Layout, Colors, Gutters, Fonts, Animation, Common, Borders } = useTheme();
+  const { Layout, Colors, Gutters, Fonts, Animation, Borders } = useTheme();
 
   return (
     <SafeAreaView style={[Layout.fill, Layout.backgroundWhite]}>
@@ -29,7 +30,6 @@ const DetailSchedule = (props: any) => {
         />
       </View>
       <ScrollView style={[Layout.fill, Gutters.regularHMargin, Gutters.regularTMargin]}>
-        
         <ListDetailScheduleComponent
           type='store'
           title='STORE'

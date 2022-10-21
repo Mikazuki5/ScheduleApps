@@ -1,13 +1,13 @@
-import { View, Text, FlatList } from 'react-native'
 import React from 'react'
+import { ClockIcon } from 'react-native-heroicons/outline'
+import { View, Text, FlatList } from 'react-native'
+
+import useTheme from '@/Hooks/useTheme'
 import { DummySchedule } from '@/Services/Dummy/Dummy'
 import { CardWithEmptyState, CardWithTouchable } from '../Common/CardComponent'
-import useTheme from '@/Hooks/useTheme'
-import { ClockIcon } from 'react-native-heroicons/outline'
 
 const ListUpcomingSchedule = ({openDetailSchedule}: any) => {
-
-  const { Layout, Gutters, Colors, Fonts, Borders } = useTheme()
+  const { Layout, Gutters, Colors, Fonts, Borders } = useTheme();
 
   const _renderItems = ({item, index}: any) => {
     return(

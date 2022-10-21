@@ -1,7 +1,8 @@
-import { View, Text } from 'react-native'
 import React from 'react'
-import { HeaderInterfaces } from '@/Services/Types/InterfaceType'
+import { View, Text } from 'react-native'
+
 import useTheme from '@/Hooks/useTheme'
+import { HeaderInterfaces } from '@/Services/Types/InterfaceType'
 
 const HeaderComponent:React.FC<HeaderInterfaces> = ({
   leftSide,
